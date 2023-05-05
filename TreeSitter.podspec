@@ -15,5 +15,6 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '14.0'
 
   s.source_files     = 'tree-sitter/src/lib.c', 'tree-sitter/src/api.h', 'tree-sitter/src/parser.h'
+  s.resources = 'tree-sitter/src/*.{h,c}'
  
 end

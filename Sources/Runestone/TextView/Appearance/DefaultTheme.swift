@@ -91,3 +91,12 @@ private extension UIColor {
         self.init(named: "theme_" + name, in: .module, compatibleWith: nil)!
     }
 }
+
+#if !SWIFT_PACKAGE
+extension Bundle {
+    static var module: Bundle {
+        class Dummy {}
+        return Bundle(for: Dummy.self)
+    }
+}
+#endif
